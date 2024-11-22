@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Recommendation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Find a Book Recommendation</h1>
+
+        <div id="description">
+            <p>Genres: fantasy, romance, thriller, educational, youth, detective, adult, mystery</p>
+        </div>
+
+        <div id="form-section">
+            <form onsubmit="getRecommendation(); return false;">
+                <label for="genre">Enter a Genre:</label>
+                <input type="text" id="genre" placeholder="e.g., fantasy, romance" required>
+                <button type="submit">Get Recommendation</button>
+            </form>
+        </div>
+
+        <div id="result-section">
+            <h2>Recommendation:</h2>
+            <p id="result" aria-live="polite"></p>
+            <button id="amazon-button" style="display: none;" onclick="window.open('', '_blank')">Buy on Amazon</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
