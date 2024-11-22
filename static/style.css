@@ -1,0 +1,95 @@
+/* General styling for the body */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #cbe1ef; /* Light blue background */
+    color: #333; /* Default text color */
+}
+
+#description {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #555;
+    text-align: left;
+    line-height: 1.5;
+}
+
+/* Container for the content */
+.container {
+    text-align: center;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    max-width: 90%;
+    transition: transform 0.3s ease; /* Smooth hover animation */
+}
+
+/* Hover effect for container */
+.container:hover {
+    transform: translateY(-10px); /* Slight lift effect */
+}
+
+/* Styling for the form section */
+#form-section {
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 12px;
+    width: 100%;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: all 0.3s ease; /* Smooth focus transition */
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #0056b3;
+}
+
+#result-section {
+    margin-top: 20px;
+}
+
+#result {
+    font-weight: bold;
+    color: #333;
+    font-size: 18px;
+    margin-top: 10px;
+    animation: fadeIn 1s ease-in-out; /* Fade-in animation for results */
+}
+
+/* Keyframes for the fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
