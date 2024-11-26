@@ -29,7 +29,8 @@ def get_random_book(genre):
 # Route to serve the frontend
 @app.route('/')
 def index():
-    return send_from_directory(os.path.join(app.static_folder, 'index.html'))
+    # Correctly send index.html from the static folder
+    return send_from_directory(os.path.join(app.root_path, 'static'), 'index.html')
 
 # Route to get a book recommendation
 @app.route('/recommend', methods=['GET'])
