@@ -1,2 +1,3 @@
-flask==2.2.2
-flask-cors==3.0.10  # Or any version that works for your project
+Flask==2.2.3  # Specify a compatible version of Flask
+Werkzeug==2.2.3  # Specify a compatible version of Werkzeug
+flask-cors==3.1.1  # Your version of flask-cors, or another version you want
