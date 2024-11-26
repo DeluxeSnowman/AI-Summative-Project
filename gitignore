@@ -1,0 +1,9 @@
+# Ignore SQLite database
+books.db
+# Ignore Python bytecode files
+__pycache__/
+*.pyc
+# Ignore virtual environment folder
+venv/
+# Ignore .env files for environment variables (optional)
+.env
