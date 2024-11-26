@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS  # Import Flask-CORS
 import sqlite3
 import random
+import os
 
 app = Flask(__name__, static_folder='static')
 
@@ -28,7 +29,7 @@ def get_random_book(genre):
 # Route to serve the frontend
 @app.route('/')
 def index():
-    return send_from_directory(app.static_folder, 'index.html')
+    return send_from_directory(os.path.join(app.static_folder, 'index.html'))
 
 # Route to get a book recommendation
 @app.route('/recommend', methods=['GET'])
@@ -52,4 +53,5 @@ def recommend():
 
 # Run the app
 if __name__ == '__main__':
-    app.run(debug=True)
+    # Make sure to run the app on Render's specified port
+    app.run(debug=True, host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
