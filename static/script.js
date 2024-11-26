@@ -1,14 +1,14 @@
 // Mapping of genres to background images
 const genreBackgrounds = {
-    fantasy: "url('images/fantasy.jpg')",
-    romance: "url('images/romance.jpg')",
-    thriller: "url('images/thriller.jpg')",
-    "sci-fi": "url('images/scifi.jpg')",
-    mystery: "url('images/mystery.jpg')",
-    detective: "url('images/detective.jpg')",
-    youth: "url('images/youth.jpg')",
-    adult: "url('images/adult.jpg')",
-    educational: "url('images/educational.jpg')"
+    fantasy: "url('static/images/fantasy.jpg')",
+    romance: "url('static/images/romance.jpg')",
+    thriller: "url('static/images/thriller.jpg')",
+    "sci-fi": "url('static/images/scifi.jpg')",
+    mystery: "url('static/images/mystery.jpg')",
+    detective: "url('static/images/detective.jpg')",
+    youth: "url('static/images/youth.jpg')",
+    adult: "url('static/images/adult.jpg')",
+    educational: "url('static/images/educational.jpg')"
 };
 
 function getRecommendation() {
@@ -33,7 +33,7 @@ function getRecommendation() {
     resultSection.textContent = "Loading...";
     amazonButton.style.display = "none";  // Hide the button while loading
 
-    fetch(`http://127.0.0.1:5000/recommend?genre=${encodeURIComponent(genre)}`)
+    fetch(`/recommend?genre=${encodeURIComponent(genre)}`)  // Fetch from the deployed Flask server
         .then(response => response.json())
         .then(data => {
             if (data.title && data.author) {
@@ -55,3 +55,5 @@ function getRecommendation() {
             amazonButton.style.display = "none";  // Hide the button if there's an error
         });
 }
+
+
