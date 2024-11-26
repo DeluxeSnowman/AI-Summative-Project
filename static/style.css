@@ -93,3 +93,20 @@ button:hover {
         opacity: 1;
     }
 }
+
+#amazon-button {
+    padding: 12px 20px;
+    background-color: #ff9900;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    display: none; /* Initially hidden */
+}
+
+/* Amazon button hover effect */
+#amazon-button:hover {
+    background-color: #cc7a00;
+}
