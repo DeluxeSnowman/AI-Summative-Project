@@ -54,5 +54,6 @@ def recommend():
 
 # Run the app
 if __name__ == '__main__':
-    # Make sure to run the app on Render's specified port
+    # Use the environment variable PORT for deployment
     app.run(debug=True, host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
+
